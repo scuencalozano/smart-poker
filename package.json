@@ -1,0 +1,26 @@
+{
+  "name": "Poker",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "start": "node app.js",
+    "test": "./node_modules/.bin/jasmine-node spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geobalas/Poker"
+  },
+  "dependencies": {
+    "connect": "~3.3.3",
+    "dotenv": "^2.0.0",
+    "express": "~3.4.7",
+    "grunt": "~0.4.4",
+    "grunt-cli": ">=0.1.13",
+    "jade": "~1.7.0",
+    "jasmine-node": "^1.14.5",
+    "less": "~2.0.0",
+    "less-middleware": "~1.0.4",
+    "request": "^2.79.0",
+    "socket.io": "~1.2.0"
+  }
+}
