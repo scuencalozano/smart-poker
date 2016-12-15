@@ -2,4 +2,6 @@ sp
 =====
 nothing to say....
 
-DEMO [here](http://smart-poker.44fs.preview.openshiftapps.com/)
+AUTOR [here](http://santiagocuenca.com/)
+
+DEMO [here](http://smartpoker-rb16.rhcloud.com/)
