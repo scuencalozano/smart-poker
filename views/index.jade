@@ -2,11 +2,12 @@ html(lang="en" ng-app="app")
 	head
 		title SmartPoker
 		link(href="styles/styles.css" rel="stylesheet" type="text/css")
-		link(rel='icon', href='images/favicon.ico', type='image/x-icon') 
+		link(rel='icon', href='images/favicon.ico', type='image/x-icon')
 		//link(href="//cdn.jsdelivr.net/bootstrap/latest/css/bootstrap.css" rel="stylesheet" type="text/css")
 	body
 		#content(ng-view)
 		script(type="text/javascript", src="socket.io/socket.io.js")
+		script(type="text/javascript", src="js/analytics.js")
 		script(type="text/javascript", src="js/libs/angular.min.js")
 		script(type="text/javascript", src="js/libs/angular-route.min.js")
 		script(type="text/javascript", src="js/libs/angular-cookies.js")
