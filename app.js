@@ -18,6 +18,9 @@ app.use(app.router);
 app.use(lessMiddleware(__dirname + '/public'));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.set('port', process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 80);
+app.set('ip', process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
+
 // Development Only
 if ( 'development' == app.get('env') ) {
 	app.use( express.errorHandler() );
@@ -27,9 +30,8 @@ var players = [];
 var tables = [];
 var eventEmitter = {};
 
-var port = process.env.PORT;
-server.listen(port);
-console.log('Listening on port ' + port);
+server.listen(app.get('port'), app.get('ip'));
+console.log('Listening on port ' + app.get('port') + " ip: " + app.get('ip'));
 
 // The lobby
 app.get('/', function( req, res ) {
