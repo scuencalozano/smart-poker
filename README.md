@@ -5,11 +5,10 @@ Bots to simulate poker players, for training purposes.
 Smart Poker analyzes all hands played in the best online poker rooms, through a series of algorithms.
 Is able to simulate every poker player, letting you know which hand plays in every situation, showing their weaknesses and what is the best strategy to exploit.
 
-based on @geobalas poker app
-https://github.com/geobalas/Poker
+Based on [@geobalas](https://github.com/geobalas/Poker) poker app
 
-HOW THE BOTS WORKS
-==================
+HOW BOTS WORK
+=============
 The code of the API will be upload in another repo
 
 DEMO

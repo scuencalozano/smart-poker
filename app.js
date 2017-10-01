@@ -18,7 +18,7 @@ app.use(app.router);
 app.use(lessMiddleware(__dirname + '/public'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.set('port', process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 80);
+app.set('port', process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 8080);
 app.set('ip', process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
 
 // Development Only
@@ -454,14 +454,12 @@ tables[3] = new Table( 3, 'Chile', 		eventEmitter(3), 6, 2, 1, 200, 40, false );
 tables[4] = new Table( 4, 'Colombia', 	eventEmitter(4), 6, 2, 1, 200, 40, false );//con 3
 tables[5] = new Table( 5, 'Costa Rica', eventEmitter(5), 6, 2, 1, 200, 40, false );//con 2
 tables[6] = new Table( 6, 'Estados Unidos', eventEmitter(6), 6, 2, 1, 200, 40, false );//con 1
-tables[7] = new Table( 7, 'Ecuador', 	eventEmitter(7), 6, 2, 1, 200, 40, false );//vacia
 
-tables[8]= new Table( 8, 'Panamá', 	eventEmitter(8), 6, 4, 2, 400, 80, false );//con 5
-tables[9]= new Table( 9, 'El Salvador', eventEmitter(9), 6, 4, 2, 400, 80, false );//con 4
-tables[10]= new Table( 10, 'Cuba', 		eventEmitter(10), 6, 4, 2, 400, 80, false );//con 3
-tables[11]= new Table( 11, 'Guatemala', eventEmitter(11), 6, 4, 2, 400, 80, false );//con 2
-tables[12]= new Table( 12, 'Haití', 	eventEmitter(12), 6, 4, 2, 400, 80, false );//con 1
-tables[13]= new Table( 13, 'Honduras',	eventEmitter(13), 6, 4, 2, 400, 80, false );//vacia
+tables[7]= new Table( 7, 'Panamá', 	eventEmitter(7), 6, 4, 2, 400, 80, false );//con 5
+tables[8]= new Table( 8, 'El Salvador', eventEmitter(8), 6, 4, 2, 400, 80, false );//con 4
+tables[9]= new Table( 9, 'Cuba', 		eventEmitter(9), 6, 4, 2, 400, 80, false );//con 3
+tables[10]= new Table( 10, 'Guatemala', eventEmitter(10), 6, 4, 2, 400, 80, false );//con 2
+tables[11]= new Table( 11, 'Haití', 	eventEmitter(11), 6, 4, 2, 400, 80, false );//con 1
 
 // type table 2 handed
 // tables[0] = new Table( 0, 'Argentina', 	eventEmitter(0), 2, 2, 1, 200, 40, false );//con 1
@@ -492,11 +490,11 @@ fillTable (tables[3], ['Fish', 'Telephone', 'ABC_FO', 'Whale']);
 fillTable (tables[4], ['Man', 'Fish', 'Whale']);
 fillTable (tables[5], ['Man', 'Dice']);
 fillTable (tables[6], ['Fish']);
-fillTable (tables[8], ['Man', 'Fish', 'Telephone', 'ABC_FO', 'Whale']);
-fillTable (tables[9], ['Whale', 'Telephone', 'ABC_FO', 'Whale']);
-fillTable (tables[10], ['Man', 'Eagle', 'Whale']);
-fillTable (tables[11], ['Man', 'Telephone']);
-fillTable (tables[12], ['Whale']);
+fillTable (tables[7], ['Man', 'Fish', 'Telephone', 'ABC_FO', 'Whale']);
+fillTable (tables[8], ['Whale', 'Telephone', 'ABC_FO', 'Whale']);
+fillTable (tables[9], ['Man', 'Eagle', 'Whale']);
+fillTable (tables[10], ['Man', 'Telephone']);
+fillTable (tables[11], ['Whale']);
 
 setInterval(function(){
 	tables[0].playBotIf();
@@ -506,11 +504,11 @@ setInterval(function(){
 	tables[4].playBotIf();
 	tables[5].playBotIf();
 	tables[6].playBotIf();
+	tables[7].playBotIf();
 	tables[8].playBotIf();
 	tables[9].playBotIf();
 	tables[10].playBotIf();
 	tables[11].playBotIf();
-	tables[12].playBotIf();
 }, velocidad);
 
 
