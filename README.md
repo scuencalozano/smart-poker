@@ -13,6 +13,10 @@ The code of the API will be upload in another repo
 
 DEMO
 ====
-[SmartPoker](http://smart-poker-smart-poker.193b.starter-ca-central-1.openshiftapps.com)
+[SmartPoker](http://santiagocuenca.com/smart-poker)
 
 Everyone is welcome to contribute to this project
+
+TO RUN
+create .env based on env.example
+node app.js

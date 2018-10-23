@@ -15,7 +15,7 @@ app.controller( 'ChatController', ['$scope', function( $scope ) {
 
 			var messageElement = angular.element( '<p class="message"><b>You</b>: ' + htmlEntities( message ) + '</p>' );
 			angular.element( messageBox ).append( messageElement );
-			messageBox.scrollTop = messageBox.scrollHeight;
+			if (messageBox) messageBox.scrollTop = messageBox.scrollHeight;
 			$scope.messageText = '';
 		}
 	}
@@ -24,7 +24,7 @@ app.controller( 'ChatController', ['$scope', function( $scope ) {
 		var messageBox = document.querySelector('#messages');
 		var messageElement = angular.element( '<p class="message"><b>' + data.sender + '</b>: ' + data.message + '</p>' );
 		angular.element( messageBox ).append( messageElement );
-		messageBox.scrollTop = messageBox.scrollHeight;
+		if (messageBox) messageBox.scrollTop = messageBox.scrollHeight;
 	});
 
 	function htmlEntities(str) {

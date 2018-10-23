@@ -7,7 +7,7 @@
     vm.register = register;
     vm.setSala = setSala;
     vm.error = '';
-    vm.newScreenName = '';
+    vm.newScreenName = 'user_' + Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 2);
     vm.sala = 'stars';
     vm.salas = [{
                   name: 'stars',

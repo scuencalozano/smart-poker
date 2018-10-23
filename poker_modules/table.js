@@ -1013,12 +1013,13 @@ Table.prototype.sendPost = function (value, controlado, player){
 	    url,
 	    {json:{key:value}},
 	    function (error, response, body) {
+					console.log('post response', player, body);
 	        if (!error && response.statusCode == 200) {
 	        	if(player === undefined){
 	        		executeRespuesta(table, body);
 	        	}else{
 	        		player.socket.emit( 'actRecibeHelp', body);
-				}
+						}
 	        }
 	    }
 	);

@@ -273,7 +273,7 @@ function( $scope, $rootScope, $http, $routeParams, $timeout, sounds, $window ) {
 			var messageBox = document.querySelector('#messages');
 			var messageElement = angular.element( '<p class="log-message">' + data.log.message + '</p>' );
 			angular.element( messageBox ).append( messageElement );
-			messageBox.scrollTop = messageBox.scrollHeight;
+			if (messageBox) messageBox.scrollTop = messageBox.scrollHeight;
 			if(data.log.notification && data.log.seat !== '') {
 				if(!$scope.notifications[data.log.seat].message) {
 					$scope.notifications[data.log.seat].message = data.log.notification;
